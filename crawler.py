@@ -33,12 +33,6 @@ for i, url in enumerate(urls_alexa):
             if href.startswith('http://web.archive.org/'):
                 lnk = href.split('*')[1][1:] + '\n'
                 if lnk.startswith('http'):
-                    #  try:
-                        #  orig_html = urllib.request.urlopen(lnk)
-                    #  except:
-                        #  lst = lnk.split('/')
-                        #  lst[1] = 'www'
-                        #  lnk = lst[0] + '//' + lst[1] + '.' + lst[2]
                     f.write(lnk)
 
 f.close()
