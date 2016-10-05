@@ -53,7 +53,7 @@ class WebSiteCrawler(WebDriver):
                     if not url in page_list and not url in self.visited:
                         page_list.append(url)
                 except ValueError:
-                    sys.stderr.write('Invalid URL: {}\n'.format(anchr.get('href')))
+                    sys.stderr.write('Invalid URL: {}\n'.format(href))
         return page_list
 
     def make_valid_url(self, url):
