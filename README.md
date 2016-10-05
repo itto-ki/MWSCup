@@ -7,7 +7,7 @@
     * pagetrafficからとってきた人気キーワードリスト
 * suspiciousdomains\_High.txt
     * ドメインブラックリスト(高リスク)
-    * [text] https://isc.sans.edu/suspicious_domains.html
+    * https://isc.sans.edu/suspicious_domains.html
 * suspiciousdomains\_Low.txt
     * ドメインブラックリスト(中リスク)
     * URL同上
