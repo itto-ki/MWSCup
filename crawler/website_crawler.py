@@ -37,12 +37,7 @@ class WebSiteCrawler(WebDriver):
         """
         子ページへのリンクを抽出し、リスト形式で返す
         """
-        html = None
-        try:
-            html = self.page_source
-        except UnexpectedAlertPresentException:
-            ActionChains(self).key_down(Keys.ENTER).key_up(Keys.ENTER).perform()
-            html = self.page_source
+        html = self.page_source
         soup = BeautifulSoup(html, 'html.parser')
         page_list = []
         for anchr in soup.find_all('a'):

@@ -18,7 +18,7 @@ class GoogleCrawler(WebDriver):
         qurery: 検索ワード
         num   : 検索結果出力数
         """
-        cmd = 'https://www.google.com/search?num=' + str(num) + '&hl=en&q='
+        cmd = 'https://www.google.com/search?num=' + str(num) + '&gl=us&hl=en&gws_rd=cr&q='
         url = cmd + query
         self.get(url)
 
@@ -32,7 +32,7 @@ class GoogleCrawler(WebDriver):
         site_list = []
         for anchr in soup.find_all('a'):
             url = anchr.get('href')
-            if url.startswith('http://www.google.co.jp'):
+            if url.startswith('http://www.google.com'):
                 try:
                     site_list.append('http://' + url.split('/')[8])
                 except IndexError:
