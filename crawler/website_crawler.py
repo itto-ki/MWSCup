@@ -49,14 +49,14 @@ class WebSiteCrawler(WebDriver):
             href = anchr.get('href')
             if href is not None:
                 try:
-                    url = self.make_validate_url(href)
+                    url = self.make_valid_url(href)
                     if not url in page_list and not url in self.visited:
                         page_list.append(url)
                 except ValueError:
                     sys.stderr.write('Invalid URL: {}\n'.format(anchr.get('href')))
         return page_list
 
-    def make_validate_url(self, url):
+    def make_valid_url(self, url):
         """
         URLが正しい形式をしていなければ正しい形式に変換して返す
         """
