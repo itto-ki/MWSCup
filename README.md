@@ -3,6 +3,11 @@
 # data
 * alexa.lst
     * Alexa top 500のリスト(http://付き)
+* data/alexa\_one\_million.lst
+    * Alexaのリスト100万件(05-Oct-2016, http://なし)
+```
+$ (for i in {0..199}; do (curl -s http://listofdomains.org/alexa/alexa_$i.html | sed -n -e '/^<tr><td>[0-9]\+<\/td><td><a href="[^"]\+">/p' | sed -e 's/<\/*[a-z]\+>//g' | sed -e 's/[0-9]\+<a href="[^"]\+">//g'); done;) > alexa_one_million.lst
+```
 * search\_keywords\_en.lst
     * pagetrafficからとってきた人気キーワードリスト
 * suspiciousdomains\_High.txt
