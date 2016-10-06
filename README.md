@@ -12,7 +12,7 @@ $ (for i in {0..199}; do (curl -s http://listofdomains.org/alexa/alexa_$i.html |
     * pagetrafficからとってきた人気キーワードリスト
 * suspiciousdomains\_High.txt
     * ドメインブラックリスト(高リスク)
-    * https://isc.sans.edu/suspicious_domains.html
+    * https://isc.sans.edu/suspicious\_domains.html
 * suspiciousdomains\_Low.txt
     * ドメインブラックリスト(中リスク)
     * URL同上
@@ -29,8 +29,10 @@ $ (for i in {0..199}; do (curl -s http://listofdomains.org/alexa/alexa_$i.html |
     * 第一引数をクエリにしてgoogle.comで100件検索、"This site may be hacked."な結果のタイトルとリンク先を出力する
 * javascript\_getter.py
     * URLを与えると、そのベージのjavascriptをファイルへ出力する
-* scan\_vulnerable\_webserver.py
-    * 第一引数のURLリストにHEADでアクセスして、Serverヘッダを出力する
+* check\_webserver.py
+    * 第一引数のURLリスト(alexa 100万件を想定)から1つランダムに選び、HEADでアクセスしてServerヘッダを取得したのち、GETでトップページを取得してmetaのgeneratorを取得するのを100回繰り返した結果を出力する
+* narrow\_dsites.py
+    * check\_webserver.pyの出力からWordPressのサイトだけ抜き出して、WordPressのバージョンが古い順のリストを出力する
 * virustotal.py
     * 第一引数のリストをVirusTotalのURL Searchに投げてpositiveの数を出力する
 

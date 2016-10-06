@@ -53,6 +53,9 @@ def main():
         meta_generator = soup.find("meta", attrs={"name":"generator"})
         if meta_generator:
             dic["meta_generator"] = meta_generator.get("content")
+        title_tag = soup.find("title")
+        if title_tag:
+            dic["title"] = title_tag.string
         dic["WordPress"] = True if "wp-content" in data else False
 
         result.append((host,dic))
