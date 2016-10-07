@@ -38,6 +38,10 @@ $ (for i in {0..199}; do (curl -s http://listofdomains.org/alexa/alexa_$i.html |
 
 # crawler
 * crawl.py
+    * Googleから人気検索ワードを検索し、上位100件のWebサイトを訪れる
 * google_crawler.py
+    * Google検索を行い、上位100件のURLを抽出する
 * website_crawler.py
+    * Seleniumを用いてWebサイトを訪れる
 * IEDriverServer.exe
+    * Selenium用のIEDriver
