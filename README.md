@@ -33,11 +33,13 @@ $ (for i in {0..199}; do (curl -s http://listofdomains.org/alexa/alexa_$i.html |
     * 第一引数のURLリスト(alexa 100万件を想定)から1つランダムに選び、HEADでアクセスしてServerヘッダを取得したのち、GETでトップページを取得してmetaのgeneratorを取得するのを100回繰り返した結果を出力する
 * narrow\_dsites.py
     * check\_webserver.pyの出力からWordPressのサイトだけ抜き出して、WordPressのバージョンが古い順のリストを出力する
-* virustotal.py
-    * 第一引数のリストをVirusTotalのURL Searchに投げてpositiveの数を出力する
 
 # crawler
 * crawl.py
+    * Googleから人気検索ワードを検索し、上位100件のWebサイトを訪れる
 * google_crawler.py
+    * Google検索を行い、上位100件のURLを抽出する
 * website_crawler.py
+    * Seleniumを用いてWebサイトを訪れる
 * IEDriverServer.exe
+    * Selenium用のIEDriver
