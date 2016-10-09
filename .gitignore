@@ -1,3 +1,4 @@
 *.log
 *.pcap
 *.graffle
+.DS_Store
