@@ -33,6 +33,10 @@ $ (for i in {0..199}; do (curl -s http://listofdomains.org/alexa/alexa_$i.html |
     * 第一引数のURLリスト(alexa 100万件を想定)から1つランダムに選び、HEADでアクセスしてServerヘッダを取得したのち、GETでトップページを取得してmetaのgeneratorを取得するのを100回繰り返した結果を出力する
 * narrow\_dsites.py
     * check\_webserver.pyの出力からWordPressのサイトだけ抜き出して、WordPressのバージョンが古い順のリストを出力する
+* dec_419c9e.py
+    * c2 問4で作成したスクリプトにコメントを付けたものである。
+スクリプトの動作にはPython2のインストールされたWindowsが必要である。
+また、RC4の復号処理が未実装であるため完全な複合はできない。
 
 # crawler
 * crawl.py
